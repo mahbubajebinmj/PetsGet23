@@ -1,0 +1,18 @@
+<!-- verify_contact.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmation Page</title>
+</head>
+<body>
+    <h1>Confirmation Page</h1>
+    <p>Please verify your details before submitting:</p>
+    <p><strong>Name:</strong> {{ form_data.name }}</p>
+    <p><strong>Email:</strong> {{ form_data.email }}</p>
+    <p><strong>Message:</strong> {{ form_data.message }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm and Submit</button>
+    </form>
+</body>
+</html>
